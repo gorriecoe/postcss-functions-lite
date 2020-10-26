@@ -1,4 +1,3 @@
-const path = require('path')
 const test = require('ava')
 const postcss = require('postcss')
 const postcssFunctions = require('./src')
@@ -96,7 +95,7 @@ test(
 test(
   'Should not pass empty arguments',
   t => {
-    return postcss(functions({
+    return postcss(postcssFunctions({
       functions: {
         'bar': function () {
           t.deepEqual(arguments.length, 0)
