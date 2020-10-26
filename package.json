@@ -10,7 +10,7 @@
     "functions"
   ],
   "author": "Gorrie Coe <gorriecoe@gmail.com>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/gorriecoe/postcss-functions-lite",
   "bugs": {
     "url": "https://github.com/gorriecoe/postcss-functions-lite/issues"
