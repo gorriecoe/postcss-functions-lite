@@ -1,6 +1,6 @@
 {
   "name": "postcss-functions-lite",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "PostCSS plugin for exposing JavaScript functions.",
   "keywords": [
     "postcss",
@@ -11,7 +11,10 @@
   ],
   "author": "Gorrie Coe <gorriecoe@gmail.com>",
   "license": "BSD-3-Clause",
-  "repository": "https://github.com/gorriecoe/postcss-functions-lite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorriecoe/postcss-functions-lite.git"
+  },
   "bugs": {
     "url": "https://github.com/gorriecoe/postcss-functions-lite/issues"
   },
