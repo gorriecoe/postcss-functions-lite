@@ -34,7 +34,7 @@ postcss()
 
 ```css
 body {
-	prop: foobar()
+  prop: foobar()
 }
 ```
 
