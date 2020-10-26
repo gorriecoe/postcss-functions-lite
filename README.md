@@ -1,7 +1,8 @@
 # Postcss-functions-lite
 
-Heavyly inspired by [postcss functions by Andy Jansson](https://github.com/andyjansson/postcss-functions).  This is a lite alternative ready for postcss 8 and doesn't include globing or have promises built in.
-[PostCSS](https://github.com/postcss/postcss) plugin for exposing JavaScript functions.
+[PostCSS](https://github.com/postcss/postcss) plugin for exposing JavaScript functions.  This is a lite alternative ready for postcss 8 which doesn't include globbing or have promises built in.
+
+Heavily inspired by [postcss functions by Andy Jansson](https://github.com/andyjansson/postcss-functions).
 
 ## Installation
 
@@ -14,10 +15,10 @@ npm install postcss-functions-lite
 ```js
 const fs = require('fs')
 const postcss = require('postcss')
-const functions = require('postcss-functions-lite')
+const postcssFunctions = require('postcss-functions-lite')
 
 const options = {
-	//options
+  //options
 }
 
 const css = fs.readFileSync('input.css', 'utf8')
@@ -30,7 +31,7 @@ postcss()
   })
 ```
 
-**Example** of a function call:
+Example of a function call:
 
 ```css
 body {
