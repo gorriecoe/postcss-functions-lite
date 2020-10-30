@@ -6,7 +6,8 @@ const valueParser = require('postcss-value-parser')
 const nodeTypes = {
   decl: 'value',
   atrule: 'params',
-  rule: 'selector'
+  rule: 'selector',
+  comment: 'text'
 }
 
 /**
@@ -54,9 +55,11 @@ module.exports = (opts = {}) => {
     Once (root) {
       const functions = opts.functions || {}
       root.walk(node => {
-        node[nodeTypes[node.type]] = valueParser(
-          node[nodeTypes[node.type]]
-        ).walk(part => transform(part, functions)).toString()
+        if (nodeTypes[node.type]) {
+          node[nodeTypes[node.type]] = valueParser(
+            node[nodeTypes[node.type]]
+          ).walk(part => transform(part, functions)).toString()
+        }
       })
     }
   }

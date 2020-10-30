@@ -93,6 +93,19 @@ test(
 )
 
 test(
+  'Should invoke a function in a comment',
+  testFixture,
+  '/*a{foo:bar()}*/',
+  '/*a{foo:baz}*/',
+  {
+    functions: {
+      'bar': () => 'baz'
+    }
+  }
+)
+
+
+test(
   'Should not pass empty arguments',
   t => {
     return postcss(postcssFunctions({
