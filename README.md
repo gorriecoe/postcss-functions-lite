@@ -14,7 +14,7 @@ Lite is a bare minimal alternative of [postcss functions](https://github.com/and
 ## Installation
 
 ```js
-npm install postcss-functions-lite
+npm install --save-dev postcss-functions-lite
 ```
 
 ### Requirements
@@ -87,17 +87,19 @@ return postcssFunctions({
 
 ## Globbing
 
-As mentioned above lite doesn't include globbing.  If you require globbling then it is recommended to switch to [functions](https://github.com/andyjansson/postcss-functions) or alternatively build a basic glob.
+As mentioned above lite doesn't include globbing.  If you require globbing then it is recommended to switch to [functions](https://github.com/andyjansson/postcss-functions) or alternatively build a basic glob.
 
 **Example:**
 
 ```js
+const path require('path')
 const glob = require('glob')
 const postcssFunctions = require('postcss-functions-lite')
 let globFunctions = {}
 
 // ...
 glob.sync('**/*.js').forEach(file => {
+  const name = path.basename(file, path.extname(file))
   globFunctions[name] = require(path.basename(file, path.extname(file)))
 })
 // ...
